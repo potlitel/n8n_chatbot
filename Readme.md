@@ -347,6 +347,32 @@ Una vez finalizada la creación del workflow, usando cualquiera de las variantes
 > Este proyecto está diseñado para ser una **plantilla flexible**. Puedes modificar la base de datos de conocimiento y el flujo para **adaptarlo a cualquier otro tema**.
 
 
+## 🚀 Cómo obtener la URL del Webhook para el nodo "When chat message received" 🎯
+
+Para integrar el chatbot con otros servicios o componentes externos, necesitas la URL del webhook que genera el nodo **When chat message received** en n8n.
+
+### 📝 Pasos para obtener la URL del webhook:
+
+1. 🔍 Abre tu workflow en la interfaz de n8n.  
+2. 📌 Selecciona el nodo **When chat message received**.  
+3. 🔗 Busca el campo **Webhook URL** dentro de las propiedades del nodo.  
+4. 📋 Copia la URL que aparecerá, por ejemplo:  
+   `https://tu-dominio-n8n.com/webhook/xxxx-xxxx-xxxx`  
+5. 🌐 Usa esta URL en servicios externos o componentes de terceros para enviar mensajes al chatbot.
+
+### ⚠️ Notas importantes:
+
+- ✅ La URL es única y exclusiva para ese nodo/flujo, debe mantenerse el workflow activo para su correcto funcionamiento.  
+- 🔄 Si modificas el nodo, la URL puede cambiar y deberás actualizarla donde la tengas usada.  
+- 🔒 Considera proteger la URL con autenticación o reglas de seguridad para evitar accesos no autorizados.  
+- 🌍 Si usas n8n en un entorno local o detrás de un firewall, asegúrate que la URL sea accesible externamente para recibir mensajes.  
+- 🔧 Para pruebas locales, herramientas como [ngrok](https://ngrok.com/) pueden exponer temporalmente el webhook a Internet.
+
+Con esta URL, tu chatbot podrá recibir y procesar mensajes enviados desde cualquier aplicación o servicio conectado. 🎉
+
+
+
+
 ## 🤝 Contribuciones
 
 ¡Las contribuciones son bienvenidas! Si deseas ayudar a mejorar este proyecto, puedes hacerlo siguiendo estos pasos:
