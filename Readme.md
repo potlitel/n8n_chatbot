@@ -12,7 +12,46 @@
 <!-- ![OpenAI GPT-4](https://img.shields.io/badge/OpenAI-GPT--4-blue) -->
 <!-- ![Build Status](https://img.shields.io/github/actions/workflow/status/usuario/repositorio/ci.yml?branch=main) -->
 
+## Tabla de Contenidos
 
+- [🔥 ChatBot n8n workflow.](#-chatbot-n8n-workflow)
+  - [Tabla de Contenidos](#tabla-de-contenidos)
+  - [✍️ Descripción](#️-descripción)
+  - [✨Características Principales](#características-principales)
+  - [⚙️Tecnologías Utilizadas](#️tecnologías-utilizadas)
+  - [📝 Requisitos Previos](#-requisitos-previos)
+  - [📝 Requisitos de Software](#-requisitos-de-software)
+    - [1. Python](#1-python)
+      - [Instalación de Python en Windows](#instalación-de-python-en-windows)
+        - [1. Descargar el instalador de Python](#1-descargar-el-instalador-de-python)
+        - [2. Ejecutar el instalador](#2-ejecutar-el-instalador)
+        - [3. Personalizar la instalación (opcional)](#3-personalizar-la-instalación-opcional)
+        - [4. Verificar la instalación](#4-verificar-la-instalación)
+      - [Instalación de Python en linux](#instalación-de-python-en-linux)
+        - [1: Usar el gestor de paquetes](#1-usar-el-gestor-de-paquetes)
+        - [2: Verificar la instalación](#2-verificar-la-instalación)
+      - [Instalación de Python en Mac](#instalación-de-python-en-mac)
+        - [1. Descargar el instalador de Python](#1-descargar-el-instalador-de-python-1)
+        - [2. Ejecutar el instalador](#2-ejecutar-el-instalador-1)
+        - [3. Verificar la instalación](#3-verificar-la-instalación)
+      - [Instalación de pip](#instalación-de-pip)
+        - [1. Verificar si pip está instalado](#1-verificar-si-pip-está-instalado)
+        - [2. Instalar pip (si no está instalado)](#2-instalar-pip-si-no-está-instalado)
+          - [1. Descarga el script](#1-descarga-el-script)
+          - [2. Ejecuta el script](#2-ejecuta-el-script)
+  - [🛠️ Para instalar el proyecto, sigue estos pasos:](#️-para-instalar-el-proyecto-sigue-estos-pasos)
+  - [📥 Uso del proyecto](#-uso-del-proyecto)
+    - [3. Levantar servicios con Docker Compose](#3-levantar-servicios-con-docker-compose)
+    - [4. Asegúrate de tener listos todos los requisitos previos antes de continuar.](#4-asegúrate-de-tener-listos-todos-los-requisitos-previos-antes-de-continuar)
+    - [5. Ejecución del script **createChatbot.py** (automatiza la creación del flujo)](#5-ejecución-del-script-createchatbotpy-automatiza-la-creación-del-flujo)
+      - [Estructura para el Prompt del Agente de IA de Béisbol](#estructura-para-el-prompt-del-agente-de-ia-de-béisbol)
+    - [6. Creación manual del workflow, usando la UI de n8n](#6-creación-manual-del-workflow-usando-la-ui-de-n8n)
+  - [🚀 Cómo obtener la URL del Webhook para el nodo "When chat message received" 🎯](#-cómo-obtener-la-url-del-webhook-para-el-nodo-when-chat-message-received-)
+    - [📝 Pasos para obtener la URL del webhook:](#-pasos-para-obtener-la-url-del-webhook)
+    - [⚠️ Notas importantes:](#️-notas-importantes)
+  - [🤝 Contribuciones](#-contribuciones)
+  - [📝 Licencia](#-licencia)
+  - [🙏 Agradecimiento y contacto](#-agradecimiento-y-contacto)
 
 ## ✍️ Descripción
 
