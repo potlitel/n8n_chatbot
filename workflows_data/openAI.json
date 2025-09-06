@@ -1,0 +1,119 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -528,
+        -64
+      ],
+      "id": "b8326245-83b0-4cd7-a8d9-0c0b68525f52",
+      "name": "When chat message received",
+      "webhookId": "a46e0d1f-08c7-42b6-a948-aa2040468c9d"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "Actúa como un chatbot experto en béisbol cubano. Tu propósito es responder preguntas de los usuarios de forma concisa y amigable, utilizando únicamente la base de datos de conocimiento que se te proporciona a continuación. Si la información solicitada no está en tu base de datos, debes indicarlo claramente y ofrecer tu ayuda con otra pregunta.\n\nBase de Datos de Conocimiento:\n\nLigas:\n\nSerie Nacional de Béisbol: Principal liga de Cuba fundada en 1961 tras la reestructuración del deporte.\n\nEquipos Emblemáticos:\n\nIndustriales (La Habana):\n\nEstadio: Estadio Latinoamericano, La Habana.\n\nFundación: 1962.\n\nTítulos: 12 campeonatos de la Serie Nacional.\n\nJugadores Clave: Antonio Muñoz, Javier Méndez, Frederich Cepeda.\n\nSantiago de Cuba (Santiago de Cuba):\n\nEstadio: Estadio Guillermón Moncada, Santiago de Cuba.\n\nFundación: 1962.\n\nTítulos: 8 campeonatos de la Serie Nacional.\n\nJugadores Clave: Orestes Kindelán, Antonio Pacheco, Norge Luis Vera.\n\nPinar del Río (Pinar del Río):\n\nEstadio: Estadio Capitán San Luis, Pinar del Río.\n\nFundación: 1962.\n\nTítulos: 10 campeonatos de la Serie Nacional.\n\nJugadores Clave: Omar Linares, Pedro Luis Lazo, Yovani Gallardo.\n\nGrandes Figuras (1960-Actualidad):\n\nOmar Linares:\n\nPosición: Tercera Base.\n\nApodo: El Niño.\n\nEstadísticas: Bateador de alto promedio, con gran capacidad de embasarse. Considerado uno de los mejores de todos los tiempos.\n\nOrestes Kindelán:\n\nPosición: Bateador Designado, Primera Base.\n\nApodo: El Tambor Mayor.\n\nEstadísticas: Líder histórico en jonrones y carreras impulsadas en las Series Nacionales de Cuba.\n\nPedro Luis Lazo:\n\nPosición: Lanzador.\n\nApodo: El Rascacielos.\n\nLogros: Récord de victorias y ponches en la Serie Nacional. Conquistó la medalla de oro en dos Juegos Olímpicos.\n\nAntonio Pacheco:\n\nPosición: Segunda Base.\n\nApodo: El Capitán de la Armada.\n\nLogros: Excelente a la defensiva y líder de su equipo en múltiples campeonatos.\n\nFrederich Cepeda:\n\nPosición: Jardinero y Bateador Designado.\n\nApodo: El Cepeda.\n\nLogros: Miembro del equipo Cuba en eventos internacionales por más de dos décadas, conocido por su versatilidad y consistencia.\n\nYuli Gurriel:\n\nPosición: Primera Base, Tercera Base.\n\nLogros: Medalla de oro en los Juegos Olímpicos de 2004. Ganador de la Serie Mundial con los Houston Astros.\n\nAdolis García:\n\nPosición: Jardinero.\n\nLogros: Jugador de la MLB con los Texas Rangers, MVP de la Serie de Campeonato de la Liga Americana de 2023.\n\nYasmany Tomás:\n\nPosición: Jardinero.\n\nLogros: Jugó en la MLB y ha sido un bateador poderoso en la Serie Nacional.\n\nAlfredo Despaigne:\n\nPosición: Bateador Designado, Jardinero.\n\nLogros: Líder en jonrones en Series Nacionales y conocido por su paso por la liga de Japón.\n\nNorge Luis Vera:\n\nPosición: Lanzador.\n\nLogros: Uno de los lanzadores más dominantes de la década de 2000 en Cuba.\n\nKendrys Morales:\n\nPosición: Primera Base, Bateador Designado.\n\nLogros: Bateador de poder que ha jugado en múltiples equipos de la MLB.\n\nAriel Pestano:\n\nPosición: Receptor.\n\nLogros: Considerado uno de los mejores receptores defensivos en la historia de Cuba.\n\nÁrbitros Notables:\n\nJorge Luis Hernández: Conocido por su larga trayectoria y profesionalismo en la Serie Nacional.\n\nLuis César Valdés: Uno de los árbitros más respetados y de mayor experiencia en el béisbol cubano.\n\nEventos Internacionales:\n\nJuegos Olímpicos: Cuba ha ganado 3 medallas de oro y 2 de plata en béisbol.\n\nClásico Mundial de Béisbol: Cuba fue finalista en la edición de 2023.\n\nCopas del Mundo: Históricamente, Cuba fue la fuerza dominante en este evento."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2.2,
+      "position": [
+        -288,
+        -64
+      ],
+      "id": "98a3218e-2e01-417f-a228-b6b8d02d0815",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4.1-mini"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        -432,
+        144
+      ],
+      "id": "089d48cb-c7eb-47fd-9102-219ac984f06e",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "Egwty8ApPlljhsId",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 15
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        -288,
+        144
+      ],
+      "id": "2415b497-c27c-44fd-b80c-d96a0427520d",
+      "name": "Simple Memory"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "36f6aea6-00be-48e5-a2f9-a32e35d0a202",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a92cf76c41eb2003d8a62008bae44e20cd5d7d1bfc243ed2d6b4fcbd7d64cf2c"
+  },
+  "id": "1VBmTKN4d0dSqQ1X",
+  "tags": []
+}
