@@ -5,8 +5,8 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Downloads](https://img.shields.io/badge/downloads-100%2B-blue.svg)](#)
 ![Project Status](https://img.shields.io/badge/status-beta-yellow)
-![Language](https://img.shields.io/github/languages/top/usuario/repositorio)
-![Last Commit](https://img.shields.io/github/last-commit/usuario/repositorio)
+![Language](https://img.shields.io/github/languages/top/potlitel/n8n_chatbot)
+![Last Commit](https://img.shields.io/github/last-commit/potlitel/n8n_chatbot)
 ![GPT-4.1-mini](https://img.shields.io/badge/Model-GPT--4.1--mini-blue)
 
 <!-- ![OpenAI GPT-4](https://img.shields.io/badge/OpenAI-GPT--4-blue) -->
